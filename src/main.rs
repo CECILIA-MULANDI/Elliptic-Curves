@@ -1,6 +1,5 @@
 use std::env;
 use itertools::Itertools;
-
 #[derive(Debug,Hash,Eq,PartialEq,Clone)]
 struct Point{
     x:u128,
@@ -20,7 +19,6 @@ fn is_prime(n:u128)->bool{
         if n%i == 0{
             return false
         }
-     
     }
     true
 }
@@ -210,10 +208,6 @@ fn main(){
                 else {
                     println!("The values of a and b cannot be greater than {finite_field}");
                 }
-               
-
-               
-
             }
             else{
                 println!("{num} is not prime");
@@ -224,7 +218,4 @@ fn main(){
         }
     }
 
-    
-   
-   
-    }
+}
