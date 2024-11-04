@@ -1,0 +1,9 @@
+[package]
+name = "elliptic_curves"
+version = "0.1.0"
+edition = "2021"
+
+#
+
+[dependencies]
+itertools = "0.13.0"
