@@ -179,22 +179,9 @@ fn main(){
                 if a_coeff > 0 && a_coeff < num && b_coeff > 0 && b_coeff < num {
                     let curve = EllipticCurve { a: a_coeff, b: b_coeff };
                     println!("Elliptic Curve parameters: {:?}", curve);
-                    
-                    let points = generate_curve(&curve, num);
-                    println!("The generated points are:");
-                    for point in points.iter().unique(){
-                        println!("{:?}",point);
-                    }
-                   
-                    // Check if the specific point is on the curve
-                    let specific_point = Point { x: 4, y:5 };
-                    if is_on_curve(&specific_point, &curve, num) {
-                        println!("The point {:?} is on the curve.", specific_point);
-                    } else {
-                        println!("The point {:?} is NOT on the curve.", specific_point);
-                    }
-                    let point_p = Point { x: 3, y: 8};
-                    let point_q = Point { x: 3, y: 8 };
+                
+                    let point_p = Point { x: 2130, y: 2999 };
+                    let point_q = Point { x: 8592, y: 2572 };
                     if is_on_curve(&point_p, &curve, num) && is_on_curve(&point_q, &curve, num){
                         match point_addition(point_p, point_q, &curve, num){
                             Some(result) => println!("The result is: {:?}", result),
